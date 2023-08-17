@@ -1,0 +1,424 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      <!-- home -->
+	  <!-- background slider -->
+      <div class="bgslider">
+      <div id="owl-slider-home" class="owl-carousel">
+        {% load static %}
+        <div class="item imgbg" style="background-image:url({% static 'img/img-slide-1.jpg' %}); background-size: cover; width: 1400px; height: 400px;">
+
+        <!-- intro -->
+        <div class="overlay-main v-align text-center" style="background-color: rgba(0, 0, 0, 0.795);">
+          <div class="col-md-10 col-xs-11">
+          
+            <h1 class="onStep" data-animation="fadeInUp" data-time="300"><span class="color">AIDEPY</span> Est une communauté</h1>
+            <span class="devider-center onStep" data-animation="fadeInUp" data-time="400"></span>
+            <div class="onStep" data-animation="fadeInUp" data-time="600" id="slidertext">
+              <h3> PLUS QUE CA C'EST UNE FAMILLE </h3>
+            </div>
+            
+          </div>
+        </div>
+        <!-- intro end -->
+       </div>
+       
+       <div class="item imgbg" style="background-image:url({% static 'img/img-slide-2.jpg' %}); background-size: cover; width: 1400px; height: 400px;">
+        <!-- intro -->
+        <div class="overlay-main v-align text-center" style="background-color: rgba(0, 0, 0, 0.795);">
+          <div class="col-md-10 col-xs-11">
+          
+            <h1 class="onStep" data-animation="fadeInUp" data-time="300"><span class="color">LIES</span> PAR UN MEME PARCOURS</h1>
+            <span class="devider-center onStep" data-animation="fadeInUp" data-time="400"></span>
+            <div class="onStep" data-animation="fadeInUp" data-time="600" id="slidertext">
+              <h3>L'ECOLE NATIONALE SUPERIEURE POLYTECHNIQUE DE YAOUNDE</h3>
+            </div>
+            
+          </div>
+        </div>
+        <!-- intro end -->
+       </div>
+       
+       <div class="item imgbg" style="background-image:url({% static 'img/img-slide-3.jpg' %}); background-size: cover; width: 1400px; height: 400px;">
+        <!-- intro -->
+        <div class="overlay-main v-align text-center" style="background-color: rgba(0, 0, 0, 0.795);">
+          <div class="col-md-10 col-xs-11">
+          
+            <h1 class="onStep" data-animation="fadeInUp" data-time="300"><span class="color">Nous Sommes AIDEPY</span> DECOUVREZ NOUS ICI</h1>
+            <span class="devider-center onStep" data-animation="fadeInUp" data-time="400"></span>
+            <div class="onStep" data-animation="fadeInUp" data-time="600" id="slidertext">
+              <h3>UN CERCLE D'INGENIEURS POLYTECHNICIENS </h3>
+            </div>
+            
+             <div class="btn-home onStep scroll-link" data-animation="fadeInUp" data-id="about" data-time="800">
+              <a class="link-class" href="#">COMMENCER</a>
+            </div>
+            
+          </div>
+        </div>
+        <!-- intro end -->
+        </div>
+        
+         </div>
+      </div>
+      <!-- background slider end -->
+      <!-- home end -->
+      
+      <!-- section about -->
+      <section class="whitepage" id="about">
+        
+        <!-- text -->
+        <div class="container">
+          <div class="row">
+          
+            <div class="col-md-6 col-md-offset-3">
+              <h2 class="text-center onStep" data-animation="fadeInUp" data-time="0">
+                Qui Sommes-Nous <span class="devider-black"></span>
+              </h2>
+              <div class="space-single"></div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="text-center onStep" data-animation="fadeInUp" data-time="300">
+                <p>
+                  "L'Association des anciens diplômés de l'École nationale supérieure polytechnique de Yaoundé (AIDEPY) est une association à but non lucratif qui a été fondée en 1971. Elle regroupe les anciens élèves de l'École nationale supérieure polytechnique de Yaoundé, une des meilleures écoles d'ingénieurs du Cameroun.
+                  
+                  L'objectif de l'AIDEPY est de promouvoir l'excellence académique et professionnelle des anciens élèves de l'École nationale supérieure polytechnique de Yaoundé, de les soutenir dans leur développement professionnel et de les fédérer autour de valeurs communes.
+                  
+                  L'AIDEPY propose un certain nombre de services à ses membres, notamment :
+                  
+                  Un réseau d'anciens élèves
+                  Des programmes de formation et de développement professionnel
+                  Des possibilités de networking
+                  Des événements sociaux et professionnels
+                  L'AIDEPY est une association dynamique et active qui joue un rôle important dans la vie de l'École nationale supérieure polytechnique de Yaoundé. Elle est un atout précieux pour ses membres et pour le Cameroun."
+                </p>
+              </div>
+
+              <div class="space-double">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- text end -->
+        
+        <!-- service-about -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="service-about">
+                <div class="service-about onStep" data-animation="fadeInLeft" data-time="0" >
+                  <a class="detail-page" href="popup-page/about-1.html">
+                  <div class="hovereffect">
+                    <img alt="imageportofolio" class="img-responsive" src="{% static 'img/logo po.jpg'%}" style="width: 325px ;height:220;">
+                    <div class="overlay"></div>
+                    <h2><span class="color">PROMOTION</span> DE L'ECOLE</h2>
+                  </div></a>
+                </div>
+
+                <div class="service-about onStep" data-animation="fadeInUp" data-time="300">
+                  <a class="detail-page" href="popup-page/about-2.html">
+                  <div class="hovereffect">
+                    <img alt="imageportofolio" class="img-responsive" src="{% static 'img/project.jpg'%}" style="width: 325px ;height:220;">
+                    <div class="overlay"></div>
+                    <h2><span class="color">OFFRE </span> D'OPPORTUNITES</h2>
+                  </div></a>
+                </div>
+
+                <div class="service-about onStep" data-animation="fadeInRight" data-time="600">
+                  <a class="detail-page" href="popup-page/about-3.html">
+                  <div class="hovereffect">
+                    <img alt="imageportofolio" class="img-responsive" src="{% static 'img/opportunity.jpg'%}">
+                    <div class="overlay"></div>
+                    <h2><span class="color">PROJETS </span> D'INOVATIONS</h2>
+                  </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- service-about end -->
+        
+      </section>
+      <!-- section about end -->
+      
+      <!-- service -->
+      <section class="servicebg" id="service-sec" >
+       <div style="background-color: rgba(0, 0, 0, 0.74);">
+        <!-- filter service -->
+        <div class="container-fluid">
+          <div class="row">
+          
+            <div class="onStep" data-animation="fadeInUp" data-time="300" >
+              <div class="filter-wraper text-center">
+                <ul class="animfadeInUpBig" data-time="1200" id="filters">
+                  <li class="filt-serv selected" data-filter=".webdesign">Aide financière </li>
+                  <li class="filt-serv" data-filter=".jquery">Réseau</li>
+                  <li class="filt-serv" data-filter=".adsbanner">Formation</li>
+                  <li class="filt-serv" data-filter=".landingpage">Réseautage</li>
+                  <li class="filt-serv" data-filter=".support">Événements</li>
+                </ul>
+              </div>
+             <div class="space-half"></div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- filter service end -->
+        
+        <!-- service gallery -->
+        <div class="container" >
+          <div class="row">
+            <div class="onStep" data-animation="fadeInUp" data-time="600" id="services">
+              <div class="col-md-12 col-xs-12">
+                <div class="service webdesign text-center">
+                  <h4>Aide financière</h4>
+
+                  <p>
+                    <b>L'AIDEPY offre également des prêts aux étudiants et aux anciens élèves qui ont besoin d'aide financière pour payer leurs études.
+                     Ces prêts sont à taux d'intérêt réduit et peuvent être remboursés sur une période de plusieurs années.
+                    Enfin, l'AIDEPY offre des subventions aux étudiants et aux anciens élèves qui ont besoin d'aide financière pour payer des frais de scolarité, des frais de livres ou d'autres frais liés aux études.
+                     Ces subventions sont accordées en fonction des besoins financiers des étudiants et des anciens élèves.</b>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-xs-12">
+                <div class="service jquery text-center">
+                  <h4> Réseau</h4>
+
+                  <p>
+                    <b>Réseau d'anciens élèves: L'AIDEPY offre à ses membres l'accès à un réseau d'anciens élèves qui peuvent les aider dans leur carrière.
+                     Les membres peuvent utiliser ce réseau pour trouver des emplois, des stages, des conseils et des opportunités de réseautage.</b>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-xs-12">
+                <div class="service adsbanner text-center">
+                  <h4>Formation</h4>
+
+                  <p>
+                  <b>Programmes de formation et de développement professionnel: L'AIDEPY offre à ses membres un certain nombre de programmes de formation et de développement professionnel. 
+                    Ces programmes peuvent aider les membres à améliorer leurs compétences, à se tenir au courant des dernières tendances de l'industrie et à se développer dans leur carrière.</b>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-xs-12">
+                <div class="service landingpage text-center">
+                  <h4>Réseautage</h4>
+
+                  <p>
+                  <b> Possibilités de networking: L'AIDEPY offre à ses membres de nombreuses possibilités de networking. 
+                    Ces événements permettent aux membres de se rencontrer, d'échanger des idées et de développer des relations avec d'autres professionnels.</b>
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-xs-12">
+                <div class="service support text-center">
+                  <h4> Événements</h4>
+
+                  <p>
+                  <b>Événements sociaux et professionnels: L'AIDEPY organise un certain nombre d'événements sociaux et professionnels tout au long de l'année. 
+                    Ces événements permettent aux membres de se détendre, de se divertir et de réseauter avec d'autres professionnels.</b>
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="space-double"></div>
+        </div>
+        <!-- service gallery end -->
+        
+        <!-- brands-->
+        <div class="onStep" data-animation="fadeInUp" data-time="900" >
+          <h4 style="text-align: center;color: white;font-weight: 600;">QUELQUES PARTENAIRES DE L'AIDEPY </h4>
+          <div class="container">
+            <div class="row">
+                <div class="owl-carousel" id="owl-brand">
+                  {% for partner in partners %}
+                    <div class="item">
+                      <a href="{{partner.site}}"><img alt="{{partner.name}}" src="{{partner.image.url}}"></a>
+                    </div>
+                  {% endfor %}
+                  </div>
+              
+            </div>
+          </div>
+        </div>
+        <!-- brands end-->
+      </div>
+      </section>
+      <!-- service end -->
+      
+      <!-- section projects -->
+      <section class="whitepage no-bottom no-top" id="projects">
+        <div class="col-md-6 col-md-offset-3">
+          <h2 class="text-center onStep" data-animation="fadeInUp" data-time="0">
+            Quelques CV d'ingénieurs <span class="devider-black"></span>
+          </h2>
+          <div class="space-single"></div>
+        </div>
+      
+        <!-- filter project -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="onStep" data-animation="fadeInUp" data-time="300">
+              <div class="filter-wraper text-center">
+                <ul id="filter-porto">
+                  <li class="filt-projects actived" data-project="*">Tous les CV
+                  </li>
+
+                  <li class="filt-projects" data-project=".Genie_civil">Genie Civil
+                  </li>
+
+                  <li class="filt-projects" data-project=".Genie_informatique">Genie Informatique
+                  </li>
+
+                  <li class="filt-projects" data-project=".Genie_mécanique">Genie Mecanique
+                  </li>
+
+                  <li class="filt-projects" data-project=".Genie_électrique">Genie Electrique
+                  </li>
+                  <li class="filt-projects" data-project=".Genie_industriel">Genie industriel
+                  </li>
+                  <li class="filt-projects" data-project=".Genie_financier">Genie financier
+                  </li>
+                  <li class="filt-projects" data-project=".Art_numérique">Art Numérique
+                  </li>
+                  <li class="filt-projects" data-project=".Humanité_numérique">Humanité Numérique
+                  </li>
+                  <li class="filt-projects" data-project=".Genie_méteo">Genie Météo
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- filter project end -->
+        
+        <!-- start gallery -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="onStep" data-animation="fadeInUp" data-time="600" id="projects-wrap">
+              {% for cv in Cvs %}
+              <div class="projects {{ cv.get_domaine_display }} ">
+                <a href="{{cv.Cv}}">telecharger son cv</a>
+                <div class="hovereffect big-img">
+                  <img style="width: 325px; height: 220px;" alt="imageportofolio" class="img-responsive" src="{{cv.photo.url}}" style="width: 325; height: 220;"></a>
+                  <div class="overlay">
+                    <h3>Ing. {{cv.nom}}  - {{cv.domaine}} </h3>
+                  </div>
+                </div>
+                
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+        <!-- gallery end -->
+        <div class="space-double">
+        </div>
+      </section>
+      <!-- section projects end -->
+      
+      <!-- yellow -->
+      <section class="yellow-page v-align">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <a class="popup-form" href="#subwrap"><h4 class="text-center onStep" data-animation="fadeInUp" data-time="600">REJOIGNEZ LA FAMILLE !</h4></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- yellow end -->
+      
+      <!-- team -->
+      <section class="whitepage" id="team">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <h2 class="text-center onStep" data-animation="fadeInUp" data-time="0">LE BUREAU<span class="devider-black"></span></h2>
+              <div class="space-single">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+    
+            {% for ing in teams %}
+            <div class="col-md-3">
+              <div class="team-wrapper onStep" data-animation="fadeInUp" data-time="400">
+                <img alt="team img 4" class="img-responsive" src="{{ing.photo.url}}" style="width: 350px; height: 350px;">
+                <div class="team-des">
+                  <h3>Ing. {{ing.nom}} </h3>
+                  <span>{{ing.poste}} <p>{{ing.anneePoste}}</p></span> 
+                  <a href="{{ing.facebook}}"><i class="fa fa-facebook"></i></a> 
+                  <a href="{{ing.twitter}}"><i class="fa fa-twitter"></i></a> 
+                  <a href="{{ing.telephone}}"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </section>
+      <!-- team end -->
+
+      <!-- section contact -->
+      <section class="contactbg no-top no-bottom" id="contactus">
+        
+        <!-- map -->
+        <div class="jumbotron no-top no-bottom">
+          <div class="onStep" data-animation="fadeInUp" data-time="300" id="map"></div>
+        </div>
+        <!-- map end -->
+
+        <div class="container">
+          <div class="row">
+          
+            <!-- contact form -->
+            <div class="col-md-8 col-xs-12">
+              <div class="onStep" data-animation="fadeInLeft" data-time="600" id="contact">
+                <form action="{% url 'contact'%}" class="row" id="form-contact" method="post" name="form-contact">
+                  {% csrf_token %}
+                  <input id="name-contact" name="name" placeholder="your name" type="text" > 
+                  <input id="email-contact" name="email" placeholder="your e-mail" type="text" > 
+                  <textarea cols="50" id="message-contact" name="message" placeholder="your enquiry" rows="4"></textarea>
+                  <div class="success" id="mail_success">MERCI. Votre message sera envoyé</div>
+                  <div class="error" id="mail_failed"> Error, email not sent</div>
+                  <button class="btn"  type="submit">Sent Now</button>
+                </form>
+              </div>
+            </div>
+            <!-- contact form end -->
+            
+            <!-- address -->
+            <div class="col-md-4 col-xs-12">
+              <div class="wrapaddres onStep" data-animation="fadeInRight" data-time="900">
+                <h5>informations de contact</h5>
+
+                <address>
+                  <span><strong>yaoundé, zone x , rue y</strong></span> <span><strong>Téléhones :</strong> (+237) 000 000 000</span> <span><strong>tel 2 :</strong>(+237) 000 000 000</span>
+                  <span><strong>Email :</strong> <a href="donfackarthur750@gmail.com">donfackarthur750@gmail.com</a></span> <span><strong>Web :</strong> <a href="#test">https://fox-s.netlify.app</a></span>
+                </address>
+              </div>
+            </div>
+            <!-- address end -->
+          </div>
+        </div>
+        
+        <!-- space -->
+        <div class="space-single"></div>
+      </section>
+      <!-- section contact end -->
+{% endblock %}

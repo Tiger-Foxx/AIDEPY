@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+        <!-- subheader -->
+        <section id="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Blog</h1>
+                        <ul class="subdetail">
+                            <li><a href="{% url 'index'%}">Acceuil</a></li>
+                            <li class="sep">/</li>
+                            <li>Blog</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader end -->
+        {% for tag in tag %}
+        <h3 style="font-size: 45px; font-weight: 900; text-align: center;">RESULTATS DES POSTS POUR ' {tag} '</h3>
+        {% endfor %}
+        
+            <!-- section -->
+            <section id="content" aria-label="section-blogg">
+            <div class="container">
+            <div class="row">
+
+                  <!-- left content -->
+                  <div class="col-md-8">
+                  <div class="onStep" data-animation="fadeInUp" data-time="300">
+                     {% for post in posts %}   
+                     <!-- article -->
+                     <article>
+                        <div class="post-image">
+                           <img style="width:800px ; height:450px ;" class="img-responsive" src="{{post.image.url}}" alt="blog-img" />
+                           <div class="post-heading">
+                              <h3><a href="#">{{ post.title }}</a></h3>
+                           </div>
+
+                        </div>
+                        <p>{{ post.contenu|slice:":250" }} ... </p> 
+                        <div class="bottom-article">
+                           <ul class="meta-post">
+                              <li><a href="#">Publié le {{ post.date }}</a>
+                              </li>
+                           </ul>
+                           <a href="{% url 'post' post.slug %}" class="btn pull-right">voir plus</a>
+                        </div>
+                     </article>
+                     <!-- article end -->
+                     {% endfor %}
+                    
+                     <!-- next prev blog -->
+                     <div id="pagination">
+                        <span class="pagina-num">Page 1 sur 3</span>
+                        <a href="#" class="current">1</a>
+                        <a href="#" class="inactive">2</a>
+                        <a href="#" class="inactive">3</a>
+                    <span class="pull-right">
+                    <a href="#">prev</a>
+                    <a href="#">next</a>
+                    </span>
+                    </div>
+                    <!-- next prev blog end -->
+                     
+                     </div>
+                  </div>
+                  <!-- left content end -->
+
+                  <!-- right content -->
+                  <div class="col-md-4">
+                     <aside class="onStep" data-animation="fadeInUp" data-time="600">
+                        <!-- widget -->
+                        <div class="widget">
+                           <h5>publicatons récentes</h5>
+                           <div class="space-single devider-widget"></div>
+                           <div class="recent">
+                              {% for post in recentposts %}
+                              <div style="padding: 5;">
+                                 <img style="width:65px ; height:65px ;" src="{{ post.image.url }}" class="pull-left" alt="caca" />
+                                 <h6><a href="{% url 'post' post.slug %}">{{ post.title }}</a></h6>
+                                 <p>{{ post.theme }}</p>
+                              </div>
+                              {% endfor %}
+                           </div>
+                        </div>
+                        <!-- widget end -->
+
+                        <!-- widget -->
+                        <div class="widget">
+                           <h5>Tags</h5>
+                           <div class="space-single devider-widget"></div>
+                           <div class="tags">
+                              {% for tag in tags %}
+                              <div><a href="{% url 'blogTag' tag.slug %}">{{tag.name}}</a>
+                              </div>
+                              {% endfor %}
+                           </div>
+                        </div>
+                        <!-- widget end -->
+
+                        <!-- widget -->
+                        <div class="widget">
+                           <h5>A propos de nous </h5>
+                           <div class="space-single devider-widget"></div>
+                           <p>L'Association des anciens diplômés de l'École nationale supérieure polytechnique de Yaoundé (AIDEPY) est une association à but non lucratif qui a été fondée en 1971. 
+                              Elle regroupe les anciens élèves de l'École nationale supérieure polytechnique de Yaoundé, une des meilleures écoles d'ingénieurs du Cameroun.
+
+                              L'objectif de l'AIDEPY est de promouvoir l'excellence académique et professionnelle des anciens élèves de l'École nationale supérieure polytechnique de Yaoundé, de les soutenir dans leur développement professionnel et de les fédérer autour de valeurs communes.</p>
+                        </div>
+                        <!-- widget end -->
+
+                     </aside>
+                  </div>
+                  <!-- right content end -->
+               </div>
+             </div>
+            </section>
+            <!-- section end -->
+        
+        
+{% endblock %}
+
+

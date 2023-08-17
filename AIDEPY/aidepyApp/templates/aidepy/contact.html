@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        </div>
+        <!-- .container -->
+      </div>
+      <!-- nav end -->
+
+        <!-- subheader -->
+        <section id="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>CONTACT</h1>
+                        <ul class="subdetail">
+                            <li><a href="{% url 'index'%}">Acceuil</a></li>
+                            <li class="sep">/</li>
+                            <li>CONTACT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader end -->
+        
+        
+      <!-- section contact -->
+      <section class="contactbg no-top no-bottom" id="contactus">
+        
+        <!-- map -->
+        <div class="jumbotron no-top no-bottom">
+          <div class="onStep" data-animation="fadeInUp" data-time="300" id="map"></div>
+        </div>
+        <!-- map end -->
+
+        <div class="container">
+          <div class="row">
+            <!-- contact form -->
+            <div class="col-md-8 col-xs-12">
+              <div class="onStep" data-animation="fadeInLeft" data-time="600" id="contact">
+                <form action="{% url 'contact'%}" class="row" id="form-contact" method="post" name="form-contact">
+                  {% csrf_token %}
+                  <input id="name-contact" name="name" placeholder="your name" type="text" > 
+                  <input id="email-contact" name="email" placeholder="your e-mail" type="text" > 
+                  <textarea cols="50" id="message-contact" name="message" placeholder="your enquiry" rows="4"></textarea>
+                  <div class="success" id="mail_success">MERCI. Votre message sera envoyé</div>
+                  <div class="error" id="mail_failed"> Error, email not sent</div>
+                  <button class="btn"  type="submit">Sent Now</button>
+                </form>
+              </div>
+            </div>
+            <!-- contact form end -->
+            
+            <!-- address -->
+            <div class="col-md-4 col-xs-12">
+              <div class="wrapaddres onStep" data-animation="fadeInRight" data-time="900">
+                <h5>informations de contact</h5>
+
+                <address>
+                  <span><strong>yaoundé, zone x , rue y</strong></span> <span><strong>Téléhones :</strong> (+237) 000 000 000</span> <span><strong>tel 2 :</strong>(+237) 000 000 000</span>
+                  <span><strong>Email :</strong> <a href="donfackarthur750@gmail.com">donfackarthur750@gmail.com</a></span> <span><strong>Web :</strong> <a href="#test">https://fox-s.netlify.app</a></span>
+                </address>
+              </div>
+            </div>
+            <!-- address end -->
+          </div>
+        </div>
+        
+        <!-- space -->
+        <div class="space-single"></div>
+      </section>
+      <!-- section contact end -->
+
+{% endblock %}

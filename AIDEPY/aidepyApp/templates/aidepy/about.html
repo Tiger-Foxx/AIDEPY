@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block content %}
+        <!-- subheader -->
+        <section id="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>A Propos de nous</h1>
+                        <ul class="subdetail">
+                            <li><a href="{% url 'index'%}">Acceuil</a></li>
+                            <li class="sep">/</li>
+                            <li>A Propos de nous</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader end -->
+      <!-- section about -->
+      <section class="whitepage" id="about">
+        
+        <!-- text -->
+        <div class="container">
+          <div class="row">
+          
+            <div class="col-md-6 col-md-offset-3">
+              <h2 class="text-center onStep" data-animation="fadeInUp" data-time="0">
+                Qui Sommes-Nous <span class="devider-black"></span>
+              </h2>
+              <div class="space-single"></div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="text-center onStep" data-animation="fadeInUp" data-time="300">
+                <p>
+                  "L'Association des anciens diplômés de l'École nationale supérieure polytechnique de Yaoundé (AIDEPY) est une association à but non lucratif qui a été fondée en 1971. Elle regroupe les anciens élèves de l'École nationale supérieure polytechnique de Yaoundé, une des meilleures écoles d'ingénieurs du Cameroun.
+                  
+                  L'objectif de l'AIDEPY est de promouvoir l'excellence académique et professionnelle des anciens élèves de l'École nationale supérieure polytechnique de Yaoundé, de les soutenir dans leur développement professionnel et de les fédérer autour de valeurs communes.
+                  
+                  L'AIDEPY propose un certain nombre de services à ses membres, notamment :
+                  
+                  Un réseau d'anciens élèves
+                  Des programmes de formation et de développement professionnel
+                  Des possibilités de networking
+                  Des événements sociaux et professionnels
+                  L'AIDEPY est une association dynamique et active qui joue un rôle important dans la vie de l'École nationale supérieure polytechnique de Yaoundé. Elle est un atout précieux pour ses membres et pour le Cameroun."
+                </p>
+              </div>
+
+              <div class="space-double">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- text end -->
+   <!-- service-about -->
+   <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="service-about">
+          <div class="service-about onStep" data-animation="fadeInLeft" data-time="0">
+            <a class="detail-page" href="popup-page/about-1.html">
+            <div class="hovereffect">
+              <img alt="imageportofolio" class="img-responsive" src="img/img-about-1.jpg" style="width: 325px ;height:220;">
+              <div class="overlay"></div>
+              <h2><span class="color">PROMOTION</span> DE L'ECOLE</h2>
+            </div></a>
+          </div>
+
+          <div class="service-about onStep" data-animation="fadeInUp" data-time="300">
+            <a class="detail-page" href="popup-page/about-2.html">
+            <div class="hovereffect">
+              <img alt="imageportofolio" class="img-responsive" src="img/img-about-2.jpg" style="width: 325px ;height:220;">
+              <div class="overlay"></div>
+              <h2><span class="color">OFFRE </span> D'OPPORTUNITES</h2>
+            </div></a>
+          </div>
+
+          <div class="service-about onStep" data-animation="fadeInRight" data-time="600">
+            <a class="detail-page" href="popup-page/about-3.html">
+            <div class="hovereffect">
+              <img alt="imageportofolio" class="img-responsive" src="img/img-about-3.jpg" style="width: 325px ;height:220;">
+              <div class="overlay"></div>
+              <h2><span class="color">PROJETS </span> D'INOVATIONS</h2>
+            </div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- service-about end -->
+        <!-- service-about end -->
+        
+      </section>
+      <!-- section about end -->
+        
+{% endblock %}

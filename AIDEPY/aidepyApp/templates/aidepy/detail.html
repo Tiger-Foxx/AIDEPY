@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+        <!-- subheader -->
+        <section id="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Blog Post</h1>
+                        <ul class="subdetail">
+                            <li><a href="{% url 'index'%}">Acceuil</a></li>
+                            <li class="sep">/</li>
+                            <li>Blog</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader end -->
+        
+        
+            <!-- section -->
+            <section id="content" aria-label="section-blogg">
+            <div class="container">
+            <div class="row">
+
+                  <!-- left content -->
+                  <div class="col-md-8">
+                  <div class="onStep" data-animation="fadeInUp" data-time="300">
+
+                    <!-- article -->
+                     <article>
+                        <h2 style="padding-top: 8; font-weight: bolder;">{{ post.title }}</h2>
+                        <div class="post-image">
+                           <img style="width:800px ; height:450px ;" class="img-responsive" src="{{post.image.url}}" alt="blog-img" />
+                           <div class="post-heading">
+                              
+                              <h5 style="padding-top: 8;">Auteur : {{ post.blogPoster }}</h5>
+                              <h5><a href="#" style="padding-top: 8;">{{ post.theme }}</a></h5>
+                           </div>
+                        </div>
+                        <p> {{ post.contenu }} </p>
+                        <a href="{{ post.joinPiece }}">Piece jointe</a>
+                        <div class="bottom-article">
+                           <ul class="meta-post">
+                              <li><a href="#">{{ post.date }}</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </article>
+                     <!-- article end -->
+
+                     <!-- comment blog -->
+
+                     <div id="comment-form-wrapper">
+                        <h5>Laisser un Commentaire</h5>
+                        <form id="commentform" name="form1" method="post" action="{% url 'comment'%}">
+                           {% csrf_token %}
+                           <input type="text" name="post" placeholder="titre du post" value="{{post.title}}"/>
+                           <input type="text" name="name" id="namecom" placeholder="votre nom" />
+                           <input type="text" name="email" id="emailcom" placeholder="votre email" />
+                           <textarea cols="10" rows="10" name="message" id="messagecom" placeholder="Comment"></textarea>
+                           <div id="mail_success" class="success">merci pour votre commentaire</div>
+                           <div id="mail_failed" class="error">Error, comment failed</div>
+                           <button  class="btn" type="submit">Commenter</button>
+                        </form>
+                     </div>
+                     <!-- comment blog end -->
+                    </div>
+                   </div>
+                   <!-- left content end -->  
+
+                  <!-- right content -->
+                  <div class="col-md-4">
+                     <aside class="onStep" data-animation="fadeInUp" data-time="600">
+                        <!-- widget -->
+                        <div class="widget">
+                           <h5>publicatons récentes</h5>
+                           <div class="space-single devider-widget"></div>
+                           
+                           <div class="recent">
+                              {% for post in recentposts %}
+                              <div style="padding: 5;">
+                                 <img style="width:65px ; height:65px ;" src="{{ post.image.url }}" class="pull-left" alt="caca" />
+                                 <h6><a href="{% url 'post' post.slug %}">{{ post.title }}</a></h6>
+                                 <p>{{ post.theme }}</p>
+                              </div>
+                              {% endfor %}
+                           </div>
+                        </div>
+                        <!-- widget end -->
+
+
+
+                        <!-- widget -->
+                        <div class="widget">
+                           <h5>About Us</h5>
+                           <div class="space-single devider-widget"></div>
+                           <p>Proin hendrerit eget tellus sit amet vestibulum. Nullam a tincidunt leo. Sed eget sem scelerisque, malesuada lectus sed, facilisis sapien. Pellentesque quis ullamcorper est, vitae condimentum enim. Phasellus suscipit eu lacus finibus rhoncus. Maecenas sed lacus aliquam, vehicula sapien ac, cursus erat. Aenean vel erat a urna efficitur varius.</p>
+                        </div>
+                        <!-- widget end -->
+
+                     </aside>
+                  </div>
+                  <!-- right content end -->
+               </div>
+             </div>
+            </section>
+            <!-- section end -->
+        
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+          
+        </div>
+        <!-- .container -->
+      </div>
+      <!-- nav end -->
+
+        <!-- subheader -->
+        <section id="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>BUREAU</h1>
+                        <ul class="subdetail">
+                            <li><a href="{% url 'index'%}">Acceuil</a></li>
+                            <li class="sep">/</li>
+                            <li>Bureau</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader end -->
+        
+        
+ <!-- team -->
+ <section class="whitepage" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2 class="text-center onStep" data-animation="fadeInUp" data-time="0">LE BUREAU<span class="devider-black"></span></h2>
+        <div class="space-single">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+    
+      {% for ing in teams %}
+      <div class="col-md-3">
+        <div class="team-wrapper onStep" data-animation="fadeInUp" data-time="400">
+          <div  style="width: 350px; height: 350px;"><img alt="team img 4" class="img-responsive" src="{{ing.photo.url}}"></div>
+          <div class="team-des">
+            <h3>Ing. {{ing.nom}} </h3>
+            <span>{{ing.poste}} <p>{{ing.anneePoste}}</p></span> 
+            <a href="{{ing.facebook}}"><i class="fa fa-facebook"></i></a> 
+            <a href="{{ing.twitter}}"><i class="fa fa-twitter"></i></a> 
+            <a href="{{ing.telephone}}"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+<!-- team end -->
+      
+      <!-- yellow -->
+      <section class="yellow-page v-align">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <a class="popup-form" href="#subwrap"><h4 class="text-center onStep" data-animation="fadeInUp" data-time="600">REJOINDRE LA FAMILLE !</h4></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- yellow end -->
+        
+      <!-- yellow end -->  
+        
+{% endblock %}

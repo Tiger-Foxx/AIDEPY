@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        </div>
+        <!-- .container -->
+      </div>
+      <!-- nav end -->
+
+        <!-- subheader -->
+        <section id="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>SERVICES</h1>
+                        <ul class="subdetail">
+                            <li><a href="{% url 'index'%}">Acceuil</a></li>
+                            <li class="sep">/</li>
+                            <li>Services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader end -->
+        
+        
+   <!-- service -->
+   <section class="servicebg" id="service-sec">
+    <div style="background-color: rgba(0, 0, 0, 0.74);">
+    <!-- filter service -->
+    <div class="container-fluid">
+      <div class="row">
+      
+        <div class="onStep" data-animation="fadeInUp" data-time="300">
+          <div class="filter-wraper text-center">
+            <ul class="animfadeInUpBig" data-time="1200" id="filters">
+              <li class="filt-serv selected" data-filter=".webdesign">Aide financière </li>
+              <li class="filt-serv" data-filter=".jquery">Réseau</li>
+              <li class="filt-serv" data-filter=".adsbanner">Formation</li>
+              <li class="filt-serv" data-filter=".landingpage">Réseautage</li>
+              <li class="filt-serv" data-filter=".support">Événements</li>
+            </ul>
+          </div>
+         <div class="space-half"></div>
+        </div>
+        
+      </div>
+    </div>
+    <!-- filter service end -->
+    
+    <!-- service gallery -->
+    <div class="container">
+      <div class="row">
+        <div class="onStep" data-animation="fadeInUp" data-time="600" id="services">
+          <div class="col-md-12 col-xs-12">
+            <div class="service webdesign text-center">
+              <h4>Aide financière</h4>
+
+              <p>
+                <b>L'AIDEPY offre également des prêts aux étudiants et aux anciens élèves qui ont besoin d'aide financière pour payer leurs études.
+                 Ces prêts sont à taux d'intérêt réduit et peuvent être remboursés sur une période de plusieurs années.
+                Enfin, l'AIDEPY offre des subventions aux étudiants et aux anciens élèves qui ont besoin d'aide financière pour payer des frais de scolarité, des frais de livres ou d'autres frais liés aux études.
+                 Ces subventions sont accordées en fonction des besoins financiers des étudiants et des anciens élèves.</b>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-xs-12">
+            <div class="service jquery text-center">
+              <h4> Réseau</h4>
+
+              <p>
+                <b>Réseau d'anciens élèves: L'AIDEPY offre à ses membres l'accès à un réseau d'anciens élèves qui peuvent les aider dans leur carrière.
+                 Les membres peuvent utiliser ce réseau pour trouver des emplois, des stages, des conseils et des opportunités de réseautage.</b>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-xs-12">
+            <div class="service adsbanner text-center">
+              <h4>Formation</h4>
+
+              <p>
+              <b>Programmes de formation et de développement professionnel: L'AIDEPY offre à ses membres un certain nombre de programmes de formation et de développement professionnel. 
+                Ces programmes peuvent aider les membres à améliorer leurs compétences, à se tenir au courant des dernières tendances de l'industrie et à se développer dans leur carrière.</b>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-xs-12">
+            <div class="service landingpage text-center">
+              <h4>Réseautage</h4>
+
+              <p>
+              <b> Possibilités de networking: L'AIDEPY offre à ses membres de nombreuses possibilités de networking. 
+                Ces événements permettent aux membres de se rencontrer, d'échanger des idées et de développer des relations avec d'autres professionnels.</b>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-xs-12">
+            <div class="service support text-center">
+              <h4> Événements</h4>
+
+              <p>
+              <b>Événements sociaux et professionnels: L'AIDEPY organise un certain nombre d'événements sociaux et professionnels tout au long de l'année. 
+                Ces événements permettent aux membres de se détendre, de se divertir et de réseauter avec d'autres professionnels.</b>
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="space-double"></div>
+    </div>
+  
+    <!-- service gallery end -->
+        
+        <!-- brands-->
+        <div class="onStep" data-animation="fadeInUp" data-time="900">
+          <div class="container">
+            <div class="row">
+            
+              <div class="owl-carousel" id="owl-brand">
+              {% for partner in partners %}
+                <div class="item">
+                  <a href="{{partner.site}}"><img alt="{{partner.name}}" src="{{partner.image.url}}"></a>
+                </div>
+              {% endfor %}
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <!-- brands end-->
+      </div>
+      </section>
+      <!-- service end -->
+      
+      <!-- yellow -->
+      <section class="yellow-page v-align">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <a class="popup-form" href="#subwrap"><h4 class="text-center onStep" data-animation="fadeInUp" data-time="600">REJOINDRE LA FAMILLE !</h4></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- yellow end -->
+        
+        
+{% endblock %}

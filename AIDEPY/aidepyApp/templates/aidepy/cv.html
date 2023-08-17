@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+        </div>
+        <!-- .container -->
+      </div>
+      <!-- nav end -->
+
+        <!-- subheader -->
+        <section id="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>CV d'ING</h1>
+                        <ul class="subdetail">
+                            <li><a href="{% url 'index'%}">Acceuil</a></li>
+                            <li class="sep">/</li>
+                            <li>CV d'ING</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader end -->
+        
+        
+   <!-- section projects -->
+   <section class="whitepage no-bottom no-top" id="projects">
+      
+    <!-- filter project -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="onStep" data-animation="fadeInUp" data-time="300">
+          <div class="filter-wraper text-center">
+            <ul id="filter-porto">
+              <li class="filt-projects actived" data-project="*">Tous les CV
+              </li>
+
+              <li class="filt-projects" data-project=".Genie_civil">Genie Civil
+              </li>
+
+              <li class="filt-projects" data-project=".Genie_informatique">Genie Informatique
+              </li>
+
+              <li class="filt-projects" data-project=".Genie_mécanique">Genie Mecanique
+              </li>
+
+              <li class="filt-projects" data-project=".Genie_électrique">Genie Electrique
+              </li>
+              <li class="filt-projects" data-project=".Genie_industriel">Genie industriel
+              </li>
+              <li class="filt-projects" data-project=".Genie_financier">Genie financier
+              </li>
+              <li class="filt-projects" data-project=".Art_numérique">Art Numérique
+              </li>
+              <li class="filt-projects" data-project=".Humanité_numérique">Humanité Numérique
+              </li>
+              <li class="filt-projects" data-project=".Genie_méteo">Genie Météo
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- filter project end -->
+    
+    <!-- start gallery -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="onStep" data-animation="fadeInUp" data-time="600" id="projects-wrap">
+          {% for cv in Cvs %}
+          <div class="projects {{ cv.get_domaine_display }} " style="padding: 8px;">
+            <a href="{{cv.Cv}}">telecharger son cv</a>
+            <div class="hovereffect big-img">
+              <img style="width: 325px; height: 220px;" alt="imageportofolio" class="img-responsive" src="{{cv.photo.url}}" style="width: 325; height: 220;"></a>
+              <div class="overlay">
+                <h3>Ing. {{cv.nom}}  - {{cv.domaine}} </h3>
+              </div>
+            </div>
+            
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+    <!-- gallery end -->
+    <div class="space-double">
+    </div>
+  </section>
+  <!-- section projects end -->
+      
+      <!-- yellow -->
+      <section class="yellow-page v-align">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <a class="popup-form" href="#subwrap"><h4 class="text-center onStep" data-animation="fadeInUp" data-time="600">REJOINDRE LA FAMILLE !</h4></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- yellow end -->
+        
+        
+{% endblock %}
